@@ -1,0 +1,130 @@
+:root {
+    --bg-color: linear-gradient(180deg, #ddd, #eee 90%);
+    --text-color: #223;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------
+                Header 
+------------------------------------ */
+header {
+    height: 95vh;
+    background: var(--bg-color);
+}
+
+.front {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: clamp(35px,5.5vw,4em);
+    color: var(--text-color);
+}
+
+.front-text {
+    color: var(--text-color);
+}
+
+/* ------------------------------------
+                Main 
+------------------------------------ */
+main {
+    background: linear-gradient(180deg, #eee 5%, #fff 20%);
+}
+
+.container {
+    max-width: 85%;
+}
+
+#poke-container {
+    min-height: 150vh;
+}
+
+.pokecard {
+    max-width: 200px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container {
+    width: 47%;
+}
+
+footer {
+    border-top: 1px solid #444;
+    padding: 2rem;
+}
+
+footer span {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-size: .9em;
+}
+
+@media (max-width: 630px) {
+    .front {
+        width: 70%;
+    }
+    .front-text {
+        font-size: 0.9em;
+    }
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: 0;
+    }
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    footer span {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .pokecard {
+        max-width: 46%;
+    }
+}
+
+@media (max-width: 350px) {
+    .pokecard {
+        max-width: 90%;
+    }
+}
+
+/* ------------------------------------
+                Swiper 
+------------------------------------ */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--bg-color);
+
+/* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
